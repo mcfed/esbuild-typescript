@@ -1,3 +1,5 @@
+#!/usr/local/bin/node
+
 const esbuild = require('esbuild')
 
 esbuild.serve({
@@ -7,7 +9,7 @@ esbuild.serve({
   bundle: true,
   outfile: 'app.js',
   define:{
-    'process.env.NODE_ENV':'production'
+    "process.env.NODE_ENV":"\"debug\""
   },
   treeShaking:'ignore-annotations'
 }).catch(() => process.exit(1))
