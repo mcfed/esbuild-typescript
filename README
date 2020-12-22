@@ -1,0 +1,18 @@
+#项目说明 
+
+使用esbuild 代替 typescript TSC编写TS项目，精减化项目工程依赖包
+
+## 运行说明
+
+启动命令开发环境
+
+```shell
+./node_modules/.bin/esbuild src/app.tsx --bundle --tsconfig="./tsconfig.json" '--define:process.env.NODE_ENV="production"' --tree-shaking=ignore-annotations  --outfile=app.js --bundle --serve
+```
+访问文件 index.html 查看页面
+
+编译代码
+
+```
+./node_modules/.bin/esbuild src/app.tsx --bundle --tsconfig="./tsconfig.json" '--define:process.env.NODE_ENV="production"' --tree-shaking=ignore-annotations  --outfile=app.js --bundle 
+```
