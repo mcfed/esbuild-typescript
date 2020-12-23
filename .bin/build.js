@@ -6,6 +6,8 @@ const esbuild = require('esbuild')
 esbuild.build({
   entryPoints: ['src/app.tsx'],
   outdir: 'lib',
+  minify: true,
+  bundle:true,
   define: {
     "process.env.NODE_ENV": "\"production\""
   },
