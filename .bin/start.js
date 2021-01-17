@@ -9,7 +9,9 @@ esbuild.serve({
   bundle: true,
   outfile: 'app.js',
   define:{
-    "process.env.NODE_ENV":"\"debug\""
+    "process.env.NODE_ENV":"\"debug\"",
+    "process.env.BLUEPRINT_NAMESPACE":"\"bp3\"", 
+    "global":"window"
   },
   treeShaking:'ignore-annotations'
 }).catch(() => process.exit(1))
